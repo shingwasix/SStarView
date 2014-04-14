@@ -8,9 +8,9 @@ You can [download SSStarView from here](https://github.com/shingwasix/SStarView)
 
 ## Screenshot
 
-![SStarView](https://raw.github.com/shingwasix/SStarView/screenshots/screenshot_00.png)
+![SStarView](https://raw.githubusercontent.com/shingwasix/SStarView/master/screenshoots/screenshoots_00.png)
 
-![SStarView](https://raw.github.com/shingwasix/SStarView/screenshots/screenshot_01.png)
+![SStarView](https://raw.githubusercontent.com/shingwasix/SStarView/master/screenshoots/screenshoots_01.png)
 
 # Building
 
