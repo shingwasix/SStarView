@@ -14,13 +14,13 @@ You can [download SSStarView from here](https://github.com/shingwasix/SStarView)
 
 # Building
 
-(1)Download the source code.
-(2)Add SStarView.h and SStarView.m in your project.
-(3)If your project is supporting ARC,you need to add compiler flag "-fno-objc-arc" for SStarView.m.
+(1) Download the source code.
+
+(2) Add SStarView.h and SStarView.m in your project.
+
+(3) If your project is supporting ARC,you need to add compiler flag "-fno-objc-arc" for SStarView.m.
 
 # License
-
-The MIT License (MIT)
 
 Copyright (c) 2012 waaile.com
 
