@@ -12,6 +12,8 @@ You can [download SStarView from here](https://github.com/shingwasix/SStarView).
 
 ![SStarView](https://raw.githubusercontent.com/shingwasix/SStarView/master/screenshoots/screenshoots_01.png)
 
+![SStarView](https://raw.githubusercontent.com/shingwasix/SStarView/master/screenshoots/screenshoots_02.png)
+
 # Building
 
 (1) Download the source code.
