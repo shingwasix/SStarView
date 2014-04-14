@@ -4,7 +4,7 @@ A starView for iOS.
 
 ## Download
 
-You can [download SSStarView from here](https://github.com/shingwasix/SStarView).
+You can [download SStarView from here](https://github.com/shingwasix/SStarView).
 
 ## Screenshot
 
