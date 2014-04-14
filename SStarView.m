@@ -100,8 +100,10 @@
 
 - (void)setStarCount:(NSUInteger)starCount
 {
-    NSAssert(starCount <= _maxStar, @"Too many star");
-    if (starCount < _minStar) {
+    if (starCount > _maxStar) {
+        starCount = _maxStar;
+    }
+    else if (starCount < _minStar) {
         starCount = _minStar;
     }
     if (starCount == _starCount) {
