@@ -55,6 +55,7 @@
         [self.view addSubview:starView];
         starView.starCount = 5; //Set star number of starView
         starView.unSelectColor = [UIColor greenColor]; //Set starView unselect color
+        starView.lineWidth = 0.0; //Set starView border width
         [starView setUserInteractionEnabled:NO]; //Disable droping starView
     }
 }

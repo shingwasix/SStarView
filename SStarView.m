@@ -256,12 +256,14 @@
     CGPathAddLines(path, &CGAffineTransformIdentity, points, sizeof(points) / sizeof(CGPoint));
     
     CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextSetLineWidth(context, _lineWidth);
-    CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
     CGContextAddPath(context, path);
     CGContextFillPath(context);
     CGContextAddPath(context, path);
-    CGContextStrokePath(context);
+    if (_lineWidth > 0.0) {
+        CGContextSetLineWidth(context, _lineWidth);
+        CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
+        CGContextStrokePath(context);
+    }
     CGPathRelease(path);
     
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
