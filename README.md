@@ -2,6 +2,8 @@
 
 A starView for iOS.
 
+Current version 1.0.2.
+
 ## Download
 
 You can [download SStarView from here](https://github.com/shingwasix/SStarView).
@@ -53,7 +55,7 @@ pod 'SStarView', :git=>"https://github.com/shingwasix/SStarView.git"
 
 # License
 
-Copyright (c) 2012 waaile.com
+Copyright (c) 2014 waaile.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
