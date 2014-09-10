@@ -10,13 +10,27 @@ You can [download SStarView from here](https://github.com/shingwasix/SStarView).
 
 ![SStarView](https://raw.githubusercontent.com/shingwasix/SStarView/master/screenshoot.png)
 
+# Requirements
+
+(1) iOS 6.0 and above.
+
+(2) ARC
+
 # Building
 
 (1) Download the source code.
 
 (2) Add SStarView.h and SStarView.m in your project.
 
-(3) If your project is supporting ARC,you need to add compiler flag "-fno-objc-arc" for SStarView.m.
+(3) If your project is not supporting ARC,you need to add compiler flag "-fobjc-arc" for SStarView.m.
+
+## Profile
+
+[CocosPods](http://cocosPods.org) is the recommended methods of installation SStarView, just add the following line to `Profile`:
+
+```
+pod 'SStarView', :git=>"https://github.com/shingwasix/SStarView.git"
+```
 
 # License
 
