@@ -14,7 +14,7 @@
 		4F0C94D918FC1EE200EE4E40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C94D818FC1EE200EE4E40 /* main.m */; };
 		4F0C94DD18FC1EE200EE4E40 /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C94DC18FC1EE200EE4E40 /* SSAppDelegate.m */; };
 		4F0C94E618FC1EE200EE4E40 /* SSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C94E518FC1EE200EE4E40 /* SSViewController.m */; };
-		4F0C950618FC1F3100EE4E40 /* SStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C950518FC1F3100EE4E40 /* SStarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F0C950618FC1F3100EE4E40 /* SStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C950518FC1F3100EE4E40 /* SStarView.m */; };
 		4F0C950918FC1F7C00EE4E40 /* SSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C950818FC1F7C00EE4E40 /* SSViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 		4F0C94DC18FC1EE200EE4E40 /* SSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
 		4F0C94E418FC1EE200EE4E40 /* SSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSViewController.h; sourceTree = "<group>"; };
 		4F0C94E518FC1EE200EE4E40 /* SSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSViewController.m; sourceTree = "<group>"; };
-		4F0C94EE18FC1EE300EE4E40 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4F0C950418FC1F3100EE4E40 /* SStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SStarView.h; sourceTree = SOURCE_ROOT; };
 		4F0C950518FC1F3100EE4E40 /* SStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SStarView.m; sourceTree = SOURCE_ROOT; };
 		4F0C950818FC1F7C00EE4E40 /* SSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSViewController.xib; sourceTree = "<group>"; };
@@ -74,7 +73,6 @@
 				4F0C94CC18FC1EE200EE4E40 /* Foundation.framework */,
 				4F0C94CE18FC1EE200EE4E40 /* CoreGraphics.framework */,
 				4F0C94D018FC1EE200EE4E40 /* UIKit.framework */,
-				4F0C94EE18FC1EE300EE4E40 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,6 +277,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SStarViewSample/SStarViewSample-Prefix.pch";
 				INFOPLIST_FILE = "SStarViewSample/SStarViewSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -292,6 +291,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SStarViewSample/SStarViewSample-Prefix.pch";
 				INFOPLIST_FILE = "SStarViewSample/SStarViewSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

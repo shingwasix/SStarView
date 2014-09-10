@@ -1,6 +1,8 @@
 //
 //  SStarView.m
 //
+//  1.0.1
+//
 //  Created by Shingwa Six on 12-10-10.
 //  Copyright (c) 2012年 waaile.com All rights reserved.
 //
@@ -26,31 +28,16 @@
 #import "SStarView.h"
 
 @interface SStarView()
-- (void)refresh;
-
 @property (retain, nonatomic) UIImage *imgSelected;
 @property (retain, nonatomic) UIImage *imgUnSelected;
+
+- (void)refresh;
 @end
 
 @implementation SStarView
-@synthesize maxStar = _maxStar;
-@synthesize minStar = _minStar;
-@synthesize starCount = _starCount;
-@synthesize lineWidth = _lineWidth;
-@synthesize imgSelected = _imgSelected;
-@synthesize imgUnSelected = _imgUnSelected;
 @synthesize borderColor = _borderColor;
 @synthesize selectColor = _selectColor;
 @synthesize unSelectColor = _unSelectColor;
-
-- (void)dealloc
-{
-    [_imgSelected release];
-    [_imgUnSelected release];
-    [_selectColor release];
-    [_unSelectColor release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -76,9 +63,9 @@
     _lineWidth = self.frame.size.height / 20;
     _starCount = 0;
     _minStar = 0;
-    _borderColor = [[UIColor grayColor] retain];
-    _selectColor = [[UIColor colorWithRed:251.0/255 green:219.0/255 blue:0.0 alpha:1.0] retain];
-    _unSelectColor = [[UIColor colorWithWhite:0.8 alpha:1.0] retain];
+    _borderColor = [UIColor grayColor];
+    _selectColor = [UIColor colorWithRed:251.0/255 green:219.0/255 blue:0.0 alpha:1.0];
+    _unSelectColor = [UIColor colorWithWhite:0.8 alpha:1.0];
     
     [self refresh];
 }
@@ -119,8 +106,7 @@
     if (!borderColor) {
         return;
     }
-    [_borderColor release];
-    _borderColor = [borderColor retain];
+    _borderColor = borderColor;
     
     self.imgSelected = nil;
     self.imgUnSelected = nil;
@@ -132,8 +118,7 @@
     if (!selectColor) {
         return;
     }
-    [_selectColor release];
-    _selectColor = [selectColor retain];
+    _selectColor = selectColor;
     
     self.imgSelected = nil;
     self.imgUnSelected = nil;
@@ -145,8 +130,7 @@
     if (!unSelectColor) {
         return;
     }
-    [_unSelectColor release];
-    _unSelectColor = [unSelectColor copy];
+    _unSelectColor = unSelectColor;
     
     self.imgSelected = nil;
     self.imgUnSelected = nil;
@@ -220,7 +204,6 @@
             img.image = self.imgUnSelected;
         }
         [self addSubview:img];
-        [img release];
         x += w;
     }
 }
@@ -297,13 +280,5 @@
     }
     self.starCount = count;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}*/
 
 @end
