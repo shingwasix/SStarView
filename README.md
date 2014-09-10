@@ -24,7 +24,26 @@ You can [download SStarView from here](https://github.com/shingwasix/SStarView).
 
 (3) If your project is not supporting ARC,you need to add compiler flag "-fobjc-arc" for SStarView.m.
 
-## Profile
+# Sample Code
+
+```
+//Create a 100px * 30px starView
+SStarView *starView = [[SStarView alloc] initWithFrame:CGRectMake(50, 90, 100, 30)];
+[self.view addSubview:starView];
+starView.starCount = 2; //Set star number of starView
+```
+
+```
+//Create a 220px * 30px width starView
+SStarView *starView = [[SStarView alloc] initWithFrame:CGRectMake(50, 260, 220, 30)];
+[self.view addSubview:starView];
+starView.starCount = 5; //Set star number of starView
+starView.unSelectColor = [UIColor greenColor]; //Set starView unselect color
+starView.lineWidth = 0.0; //Set starView border width
+[starView setUserInteractionEnabled:NO]; //Disable droping starView
+```
+
+# Profile
 
 [CocosPods](http://cocosPods.org) is the recommended methods of installation SStarView, just add the following line to `Profile`:
 
