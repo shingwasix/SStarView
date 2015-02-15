@@ -49,9 +49,7 @@ starView.lineWidth = 0.0; //Set starView border width
 
 [CocosPods](http://cocosPods.org) is the recommended methods of installation SStarView, just add the following line to `Profile`:
 
-```
-pod 'SStarView', :git=>"https://github.com/shingwasix/SStarView.git"
-```
+> `pod 'SStarView'`
 
 # License
 
