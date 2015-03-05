@@ -27,13 +27,14 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface SStarView : UIControl
-@property (assign, nonatomic) NSUInteger maxStar;
-@property (assign, nonatomic) NSUInteger minStar;
-@property (assign, nonatomic) NSUInteger starCount;
-@property (assign, nonatomic) CGFloat lineWidth;
+@property (assign, nonatomic) IBInspectable NSUInteger maxStar;
+@property (assign, nonatomic) IBInspectable NSUInteger minStar;
+@property (assign, nonatomic) IBInspectable NSUInteger starCount;
+@property (assign, nonatomic) IBInspectable CGFloat lineWidth;
 
-@property (copy, nonatomic) UIColor *borderColor;
-@property (copy, nonatomic) UIColor *selectColor;
-@property (copy, nonatomic) UIColor *unSelectColor;
+@property (copy, nonatomic) IBInspectable UIColor *borderColor;
+@property (copy, nonatomic) IBInspectable UIColor *selectColor;
+@property (copy, nonatomic) IBInspectable UIColor *unSelectColor;
 @end

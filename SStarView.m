@@ -38,6 +38,7 @@
 @synthesize borderColor = _borderColor;
 @synthesize selectColor = _selectColor;
 @synthesize unSelectColor = _unSelectColor;
+@synthesize maxStar = _maxStar;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -63,9 +64,6 @@
     _lineWidth = self.frame.size.height / 20;
     _starCount = 0;
     _minStar = 0;
-    _borderColor = [UIColor grayColor];
-    _selectColor = [UIColor colorWithRed:251.0/255 green:219.0/255 blue:0.0 alpha:1.0];
-    _unSelectColor = [UIColor colorWithWhite:0.8 alpha:1.0];
     
     [self refresh];
 }
@@ -74,6 +72,14 @@
 {
     _maxStar = maxStar;
     [self refresh];
+}
+
+- (NSUInteger)maxStar
+{
+    if (_maxStar < 1) {
+        _maxStar = 1;
+    }
+    return _maxStar;
 }
 
 - (void)setMinStar:(NSUInteger)minStar
@@ -137,6 +143,30 @@
     [self refresh];
 }
 
+- (UIColor *)borderColor
+{
+    if (!_borderColor) {
+        _borderColor = [UIColor grayColor];
+    }
+    return _borderColor;
+}
+
+- (UIColor *)selectColor
+{
+    if (!_selectColor) {
+        _selectColor = [UIColor colorWithRed:251.0/255 green:219.0/255 blue:0.0 alpha:1.0];
+    }
+    return _selectColor;
+}
+
+- (UIColor *)unSelectColor
+{
+    if (!_unSelectColor) {
+        _unSelectColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+    }
+    return _unSelectColor;
+}
+
 - (void)didMoveToSuperview
 {
     [self refresh];
@@ -145,15 +175,15 @@
 - (UIImage *)imgSelected
 {
     if (!_imgSelected) {
-        self.imgSelected = [self createImgWithHeight:self.bounds.size.height color:_selectColor];
+        _imgSelected = [self createImgWithHeight:self.bounds.size.height color:_selectColor];
     }
     return _imgSelected;
 }
 
-- (UIImage *)imgUnSelected
+- (UIImage *)imgUnSelected 
 {
     if (!_imgUnSelected) {
-        self.imgUnSelected = [self createImgWithHeight:self.bounds.size.height color:_unSelectColor];
+        _imgUnSelected = [self createImgWithHeight:self.bounds.size.height color:_unSelectColor];
     }
     return _imgUnSelected;
 }
@@ -178,6 +208,7 @@
 
 - (void)refresh
 {
+#if !TARGET_INTERFACE_BUILDER
     if (![self superview]) {
         return;
     }
@@ -187,18 +218,22 @@
         [v removeFromSuperview];
     }
     
-    if (_maxStar < 1) {
+    if (self.maxStar < 1) {
         return;
     }
     
-    NSUInteger w = self.bounds.size.width / _maxStar;
+    if (self.maxStar > INFINITY) {
+        return;
+    }
+    
+    NSUInteger w = self.bounds.size.width / self.maxStar;
     NSUInteger sh = self.bounds.size.height;
     NSUInteger x = (w - sh) / 2;
     
-    for (NSUInteger i = 0; i < _maxStar; i++) {
+    for (NSUInteger i = 0; i < self.maxStar; i++) {
         UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(x, 0, sh, sh)];
         img.contentMode = UIViewContentModeCenter;
-        if (i < _starCount) {
+        if (i < self.starCount) {
             img.image = self.imgSelected;
         } else {
             img.image = self.imgUnSelected;
@@ -206,6 +241,7 @@
         [self addSubview:img];
         x += w;
     }
+#endif
 }
 
 - (UIImage *)createImgWithHeight:(CGFloat)height color:(UIColor *)color
@@ -242,9 +278,9 @@
     CGContextAddPath(context, path);
     CGContextFillPath(context);
     CGContextAddPath(context, path);
-    if (_lineWidth > 0.0) {
-        CGContextSetLineWidth(context, _lineWidth);
-        CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
+    if (self.lineWidth > 0.0) {
+        CGContextSetLineWidth(context, self.lineWidth);
+        CGContextSetStrokeColorWithColor(context, self.borderColor.CGColor);
         CGContextStrokePath(context);
     }
     CGPathRelease(path);
@@ -256,13 +292,13 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint pt = [[touches anyObject] locationInView:self];
-    CGFloat w = self.bounds.size.width / _maxStar;
+    CGFloat w = self.bounds.size.width / self.maxStar;
     NSInteger count = pt.x / w + 1;
     if (count < 0) {
         count = 0;
     }
-    if (count > _maxStar) {
-        count = _maxStar;
+    if (count > self.maxStar) {
+        count = self.maxStar;
     }
     self.starCount = count;
 }
@@ -270,13 +306,13 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint pt = [[touches anyObject] locationInView:self];
-    CGFloat w = self.bounds.size.width / _maxStar;
+    CGFloat w = self.bounds.size.width / self.maxStar;
     NSInteger count = pt.x / w + 1;
     if (count < 0) {
         count = 0;
     }
-    if (count > _maxStar) {
-        count = _maxStar;
+    if (count > self.maxStar) {
+        count = self.maxStar;
     }
     self.starCount = count;
 }

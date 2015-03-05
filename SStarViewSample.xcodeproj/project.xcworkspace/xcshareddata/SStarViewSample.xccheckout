@@ -10,29 +10,29 @@
 	<string>SStarViewSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D221397F-7689-4BCF-ADAC-25BAAEC64F58</key>
+		<key>202863A5B3D986A459669556D4578977E26A57AD</key>
 		<string>https://github.com/shingwasix/SStarView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SStarViewSample/SStarViewSample.xcodeproj/project.xcworkspace</string>
+	<string>SStarViewSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D221397F-7689-4BCF-ADAC-25BAAEC64F58</key>
-		<string>../../..</string>
+		<key>202863A5B3D986A459669556D4578977E26A57AD</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/shingwasix/SStarView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D221397F-7689-4BCF-ADAC-25BAAEC64F58</string>
+	<string>202863A5B3D986A459669556D4578977E26A57AD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D221397F-7689-4BCF-ADAC-25BAAEC64F58</string>
+			<string>202863A5B3D986A459669556D4578977E26A57AD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SStarView</string>
 		</dict>
