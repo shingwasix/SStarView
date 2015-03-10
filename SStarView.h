@@ -1,7 +1,7 @@
 //
 //  SStarView.h
 //
-//  1.0.2
+//  1.0.3
 //
 //  Created by Shingwa Six on 12-10-10.
 //  Copyright (c) 2012年 waaile.com All rights reserved.
