@@ -1,10 +1,10 @@
 //
 //  SStarView.h
 //
-//  1.0.3
+//  1.0.3 (15-03-10)
 //
 //  Created by Shingwa Six on 12-10-10.
-//  Copyright (c) 2012年 waaile.com All rights reserved.
+//  Copyright (c) 2012年 WAAILE.com All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

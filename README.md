@@ -2,7 +2,7 @@
 
 A starView for iOS.
 
-Current version 1.0.2.
+Current version 1.0.3.
 
 ## Download
 
@@ -14,7 +14,7 @@ You can [download SStarView from here](https://github.com/shingwasix/SStarView).
 
 # Requirements
 
-(1) iOS 6.0 and above.
+(1) iOS
 
 (2) ARC
 
@@ -53,7 +53,7 @@ starView.lineWidth = 0.0; //Set starView border width
 
 # License
 
-Copyright (c) 2014 waaile.com
+Copyright (c) 2014 WAAILE.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
